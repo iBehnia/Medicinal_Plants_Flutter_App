@@ -5,8 +5,8 @@ import '../Themes/MyColors.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     ThemeData.light().copyWith(
-      primaryColor: Colors.amberAccent,
-      scaffoldBackgroundColor: kbackGroundColor,
+      primaryColor: kBackGroundColor,
+      scaffoldBackgroundColor: kBackGroundColor,
       buttonColor: kButtonColor,
       buttonTheme: ButtonThemeData(
         shape:
