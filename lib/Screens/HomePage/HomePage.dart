@@ -35,7 +35,10 @@ class _HomePageState extends State<HomePage> {
             ),
             Text(
               'نزدیک ترین گیاهان',
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
+              ),
               textAlign: TextAlign.start,
             ),
             NearestPlantsGridView(),
