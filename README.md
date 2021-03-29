@@ -1,4 +1,4 @@
-# medical_plants
+# Medical_Plants_Flutter_App
 
 A new Flutter application.
 
