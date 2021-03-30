@@ -5,7 +5,7 @@ import '../Themes/MyColors.dart';
 class CustomTheme {
   static ThemeData get lightTheme {
     return ThemeData(
-      primaryColor: kBackGroundColor,
+      primaryColor: kButtonColor,
       scaffoldBackgroundColor: kBackGroundColor,
       fontFamily: 'iranSans',
       buttonTheme: ButtonThemeData(

@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medical_plants/Screens/HomePage/HomePage.dart';
-import 'package:medical_plants/Screens/SplashScreen/SplashScreenPage.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:medical_plants/Themes/MyColors.dart';
+
+import '../Screens/HomePage/HomePage.dart';
+import '../Screens/LoginRegister/Login.dart';
 
 //import 'package:persistent_bottom_nav_bar/nav-bar-styles/style-16-bottom-nav-bar.widget.dart';
 
@@ -27,7 +30,12 @@ class MyBottomNavigator extends StatelessWidget {
       hideNavigationBarWhenKeyboardShows:
           true, // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
       decoration: NavBarDecoration(
-        borderRadius: BorderRadius.circular(10.0),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+          ),
+        ],
+        borderRadius: BorderRadius.circular(18.0),
         colorBehindNavBar: Colors.white,
       ),
       popAllScreensOnTapOfSelectedTab: true,
@@ -46,7 +54,6 @@ class MyBottomNavigator extends StatelessWidget {
       navBarStyle:
           NavBarStyle.style16, // Choose the nav bar style with this property.
     );
-    ;
   }
 
   List<Widget> _buildScreens() {
@@ -54,28 +61,57 @@ class MyBottomNavigator extends StatelessWidget {
       HomePage(),
       HomePage(),
       HomePage(),
+      Login(),
+      HomePage(),
     ];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
-        title: ("Home"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        inactiveIcon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/Setting.svg',
+        ),
+        icon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/Setting.svg',
+        ),
+        //title: ('Home'),
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.home),
-        title: ("Home"),
-        activeColorPrimary: CupertinoColors.activeBlue,
-        inactiveColorPrimary: CupertinoColors.systemGrey,
+        inactiveIcon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/Notification.svg',
+        ),
+        icon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/Notification.svg',
+        ),
+        //title: ('Profile'),
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(CupertinoIcons.settings),
-        title: ("Settings"),
-        activeColorPrimary: CupertinoColors.activeBlue,
+        icon: Icon(
+          Icons.add,
+          color: kBackGroundColor,
+        ),
+        activeColorPrimary: CupertinoColors.activeGreen,
         inactiveColorPrimary: CupertinoColors.systemGrey,
+        // title: ('Report'),
+      ),
+      PersistentBottomNavBarItem(
+        inactiveIcon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/Profile.svg',
+        ),
+        icon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/ActiveIcons/Profile.svg',
+        ),
+        // title: ('Notification'),
+      ),
+      PersistentBottomNavBarItem(
+        inactiveIcon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/InActiveIcons/InHome.svg',
+        ),
+        icon: SvgPicture.asset(
+          'Assets/Icons/BottomNavigator/ActiveIcons/Home.svg',
+        ),
+        // title: ('Setting'),
       ),
     ];
   }

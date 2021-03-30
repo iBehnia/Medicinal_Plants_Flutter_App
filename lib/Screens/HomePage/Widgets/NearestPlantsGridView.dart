@@ -2,8 +2,10 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:medical_plants/Screens/HomePage/Widgets/GridViews.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 
 class NearestPlantsGridView extends StatelessWidget {
@@ -11,7 +13,7 @@ class NearestPlantsGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
-      height: Get.height * 0.4,
+      height: Get.height * 0.33,
       child: GridView.count(
         scrollDirection: Axis.horizontal,
         crossAxisCount: 2,
@@ -43,9 +45,8 @@ class NearestPlantsGridView extends StatelessWidget {
             Row(
               children: [
                 IconButton(
-                    icon: Icon(
-                      FontAwesomeIcons.heart,
-                      color: Colors.red,
+                    icon: SvgPicture.asset(
+                      'Assets/Icons/Like.svg',
                     ),
                     onPressed: () {})
               ],
