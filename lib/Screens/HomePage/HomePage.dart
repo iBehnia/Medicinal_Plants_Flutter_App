@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
+import 'package:medical_plants/GeneralWidgets/BottomNavigator.dart';
 import 'package:medical_plants/Screens/HomePage/Widgets/SearchBar.dart';
 
 import 'package:get/get.dart';
 import 'package:medical_plants/Screens/SplashScreen/SplashScreenPage.dart';
 
 import '../HomePage/Widgets/NearestPlantsGridView.dart';
+import '../HomePage/Widgets/NearestObserversGridView.dart';
 
-class HomePage extends StatefulWidget {
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,18 +31,26 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            Text(
-              'نزدیک ترین گیاهان',
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.w400,
-              ),
-              textAlign: TextAlign.start,
-            ),
+            txt('نزدیک ترین گیاهان'),
             NearestPlantsGridView(),
+            txt('نزدیک ترین مشاهده کننده ها'),
+            NearestObserversGridView(),
           ],
         ),
       ),
     ));
+  }
+
+  Widget txt(String str) {
+    return Container(
+      margin: EdgeInsets.only(right: 0, top: 10),
+      child: Text(
+        str,
+        style: TextStyle(
+          fontSize: 18,
+          fontWeight: FontWeight.w400,
+        ),
+      ),
+    );
   }
 }

@@ -4,13 +4,14 @@ import '../Themes/MyColors.dart';
 
 class CustomTheme {
   static ThemeData get lightTheme {
-    ThemeData.light().copyWith(
+    return ThemeData(
       primaryColor: kBackGroundColor,
       scaffoldBackgroundColor: kBackGroundColor,
-      buttonColor: kButtonColor,
+      fontFamily: 'iranSans',
       buttonTheme: ButtonThemeData(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
+        buttonColor: kButtonColor,
       ),
     );
   }
