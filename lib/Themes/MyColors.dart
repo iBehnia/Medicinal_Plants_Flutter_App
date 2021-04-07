@@ -15,3 +15,5 @@ const Color kCancelButtonColor = Color(0xffFF6464);
 const Color kSearchBarColor = Color(0xffF4F5F7);
 
 const Color kSearchBarIconsColor = Color(0xff9FA5C0);
+
+const Color kUnSelectedColor = Color(0xff9FA5C0);

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_plants/GeneralWidgets/BottomNavigator.dart';
 import 'package:medical_plants/Screens/HomePage/HomePage.dart';
+import 'package:medical_plants/Themes/MyColors.dart';
 
 class SplashScreenPage extends StatelessWidget {
   @override
@@ -8,12 +10,29 @@ class SplashScreenPage extends StatelessWidget {
     _handelSplash();
     return Scaffold(
       body: Center(
-        child: Text(
-          'Welcome',
-          style: TextStyle(
-            fontWeight: FontWeight.w900,
-            fontSize: 30,
-          ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Image.asset(
+              'Assets/Images/Logo.png',
+              height: Get.height / 4,
+            ),
+            SizedBox(
+              height: Get.height / 30,
+            ),
+            FittedBox(
+              child: Text(
+                'سامانه شناسایی مکان\n گیاهان دارویی',
+                style: TextStyle(
+                  // fontWeight: FontWeight.w300,
+                  fontSize: 30,
+                  color: kButtonColor,
+                ),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -21,6 +40,6 @@ class SplashScreenPage extends StatelessWidget {
 
   Future _handelSplash() async {
     await Future.delayed(Duration(seconds: 2))
-        .then((value) => Get.off(HomePage()));
+        .then((value) => Get.off(MyBottomNavigator()));
   }
 }

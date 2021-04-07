@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_plants/Themes/MyColors.dart';
 
 class InputTxt extends StatelessWidget {
   bool isSecure;
@@ -10,26 +11,23 @@ class InputTxt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(10),
-      child: TextField(
-        textAlign: TextAlign.right,
-        obscureText: isSecure,
+      child: Directionality(
         textDirection: TextDirection.rtl,
-        decoration: InputDecoration(
-          hintTextDirection: TextDirection.rtl,
-          labelStyle: TextStyle(),
-          isDense: true,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(30),
-            borderSide: BorderSide(
-              width: 2.0,
+        child: TextField(
+          obscureText: isSecure,
+          decoration: InputDecoration(
+            labelStyle: TextStyle(),
+            isDense: true,
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(30),
             ),
+            prefixIcon: Container(
+              margin: EdgeInsets.only(right: 10),
+              child: suffix,
+            ),
+            suffix: prefix,
+            labelText: lable,
           ),
-          suffix: Container(
-            margin: EdgeInsets.only(right: 10, top: 10),
-            child: suffix,
-          ),
-          prefix: prefix,
-          labelText: lable,
         ),
       ),
     );

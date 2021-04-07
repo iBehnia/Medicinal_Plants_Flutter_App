@@ -15,12 +15,12 @@ class SearchBar extends StatelessWidget {
             hintTextDirection: TextDirection.rtl,
             fillColor: kSearchBarColor,
             filled: true,
-            prefix: Buttons(icon: Icons.search),
+            suffix: Buttons(icon: Icons.search),
             border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(30),
                 borderSide: BorderSide.none),
-            suffix: Container(
-              margin: EdgeInsets.only(right: 10, top: 10),
+            prefix: Container(
+              margin: EdgeInsets.only(top: 10),
               child: FittedBox(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,

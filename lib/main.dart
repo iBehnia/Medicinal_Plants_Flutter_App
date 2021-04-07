@@ -16,10 +16,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      theme: Themes.light,
       title: 'IranMedicalPlants',
       debugShowCheckedModeBanner: false,
-      theme: CustomTheme.lightTheme,
-      home: MyBottomNavigator(),
+      home: SplashScreenPage(),
     );
   }
 }

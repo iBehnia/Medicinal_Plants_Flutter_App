@@ -4,6 +4,7 @@ import 'package:medical_plants/Screens/HomePage/Widgets/BestObserversGridView.da
 import 'package:medical_plants/Screens/HomePage/Widgets/SearchBar.dart';
 
 import 'package:get/get.dart';
+import 'package:medical_plants/Screens/LoginRegister/LogInOutTabBar.dart';
 
 import '../HomePage/Widgets/NearestPlantsGridView.dart';
 import '../HomePage/Widgets/NearestObserversGridView.dart';
@@ -14,28 +15,39 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         body: SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.only(top: 20, bottom: 20),
         child: SingleChildScrollView(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
                 height: Get.height / 15,
                 child: Row(
                   children: [
+                    SearchBar(),
                     IconButton(
                       icon: Icon(Icons.settings),
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.to(LogInOutTabBar());
+                      },
                     ),
-                    SearchBar(),
                   ],
                 ),
               ),
-              txt('نزدیک ترین گیاهان'),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: txt('نزدیک ترین گیاهان'),
+              ),
               NearestPlantsGridView(),
-              txt('نزدیک ترین مشاهده کننده ها'),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: txt('نزدیک ترین مشاهده کننده ها'),
+              ),
               NearestObserversGridView(),
-              txt('بهترین مشاهده کننده ها'),
+              Padding(
+                padding: const EdgeInsets.only(right: 20),
+                child: txt('بهترین مشاهده کننده ها'),
+              ),
               BestObserversGridView(),
             ],
           ),
