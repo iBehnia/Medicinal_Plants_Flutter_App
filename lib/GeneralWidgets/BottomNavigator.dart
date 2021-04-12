@@ -2,11 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:medical_plants/Screens/ReprotPages/ReportStep1Page.dart';
+import 'package:medical_plants/Screens/UserProfile/UserProfilePageTabBar.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 import 'package:medical_plants/Themes/Theme.dart';
 
 import '../Screens/HomePage/HomePage.dart';
-import '../Screens/LoginRegister/LogInOutTabBar.dart';
+import '../Screens/LoginRegister/LogInOutPageTabBar.dart';
 
 //import 'package:persistent_bottom_nav_bar/nav-bar-styles/style-16-bottom-nav-bar.widget.dart';
 
@@ -18,7 +20,6 @@ class MyBottomNavigator extends StatelessWidget {
   const MyBottomNavigator({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Get.changeTheme(Themes.light);
     return Directionality(
       textDirection: TextDirection.rtl,
       child: PersistentTabView(
@@ -65,8 +66,8 @@ class MyBottomNavigator extends StatelessWidget {
   List<Widget> _buildScreens() {
     return [
       HomePage(),
-      HomePage(),
-      HomePage(),
+      UserProfilePageTabBar(),
+      ReportStep1Page(),
       HomePage(),
       HomePage(),
     ];

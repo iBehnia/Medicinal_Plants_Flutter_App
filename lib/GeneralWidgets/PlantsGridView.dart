@@ -8,14 +8,16 @@ import 'package:get/get.dart';
 import 'package:medical_plants/Screens/HomePage/Widgets/GridViews.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 
-class NearestPlantsGridView extends StatelessWidget {
+class PlantsGridView extends StatelessWidget {
+  Axis direction;
+  PlantsGridView({this.direction});
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 10),
       height: Get.height * 0.33,
       child: GridView.count(
-        scrollDirection: Axis.horizontal,
+        scrollDirection: direction,
         crossAxisCount: 2,
         children: List.generate(50, (index) => gridCard()),
       ),

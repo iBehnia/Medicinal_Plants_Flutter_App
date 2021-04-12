@@ -18,7 +18,7 @@ class _MyDropDownButtonState extends State<MyDropDownButton> {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.symmetric(vertical: 10),
         child: Directionality(
           textDirection: TextDirection.rtl,
           child: DropdownButtonFormField(

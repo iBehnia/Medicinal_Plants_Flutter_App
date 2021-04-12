@@ -7,10 +7,13 @@ class Themes {
     primaryColor: kButtonColor,
     scaffoldBackgroundColor: kBackGroundColor,
     fontFamily: 'iranSans',
+    buttonColor: kButtonColor,
+    textTheme: TextTheme(),
     accentColor: kButtonColor,
     primaryColorLight: kButtonColor,
     buttonTheme: ButtonThemeData(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18.0)),
+      padding: EdgeInsets.all(13),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
       buttonColor: kButtonColor,
     ),
   );

@@ -2,16 +2,16 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medical_plants/GeneralWidgets/InputTxt.dart';
-import 'package:medical_plants/Screens/LoginRegister/Widgets/Register.dart';
+import 'package:medical_plants/Screens/LoginRegister/Widgets/RegisterTab.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 import 'package:get/get.dart';
 import 'package:medical_plants/Themes/Theme.dart';
 
-import 'Widgets/Login.dart';
+import 'Widgets/LoginTab.dart';
 
 TabController _tabController;
 
-class LogInOutTabBar extends StatelessWidget {
+class LogInOutPgeTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,7 +65,7 @@ Widget MyTabBar() {
         Expanded(
           child: SingleChildScrollView(
             child: Container(
-              height: Get.height * 0.75,
+              height: Get.height * 0.69,
               width: Get.width,
               margin: EdgeInsets.only(
                 top: 0,
@@ -73,8 +73,8 @@ Widget MyTabBar() {
                 right: 20,
               ),
               child: TabBarView(children: [
-                Register(),
-                Login(),
+                RegisterTab(),
+                LoginTab(),
               ]),
             ),
           ),

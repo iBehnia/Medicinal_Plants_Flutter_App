@@ -39,7 +39,7 @@ class PasswordRecoveryPage extends StatelessWidget {
                 ),
               ),
               InputTxt(
-                lable: 'پست الکترونیک',
+                label: 'پست الکترونیک',
                 suffix:
                     SvgPicture.asset('Assets/Icons/LoginRegister/Email.svg'),
               ),

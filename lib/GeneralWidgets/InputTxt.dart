@@ -5,12 +5,12 @@ class InputTxt extends StatelessWidget {
   bool isSecure;
   Widget suffix;
   Widget prefix;
-  String lable;
-  InputTxt({this.isSecure = false, this.suffix, this.lable, this.prefix});
+  String label;
+  InputTxt({this.isSecure = false, this.suffix, this.label, this.prefix});
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.symmetric(vertical: 10),
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: TextField(
@@ -26,7 +26,7 @@ class InputTxt extends StatelessWidget {
               child: suffix,
             ),
             suffix: prefix,
-            labelText: lable,
+            labelText: label,
           ),
         ),
       ),

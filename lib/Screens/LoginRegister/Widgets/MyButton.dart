@@ -4,15 +4,21 @@ import 'package:medical_plants/Themes/MyColors.dart';
 class MyButton extends StatelessWidget {
   String txt;
   VoidCallback func;
-  MyButton({this.txt, this.func});
+  Color color;
+  Color textColor;
+  MyButton(
+      {@required this.txt,
+      @required this.func,
+      this.color = kButtonColor,
+      this.textColor = kWhiteTextColor});
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(10),
+        margin: EdgeInsets.symmetric(vertical: 10),
         child: ElevatedButton(
           style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(kButtonColor),
+            backgroundColor: MaterialStateProperty.all(color),
             padding: MaterialStateProperty.all(EdgeInsets.all(13)),
             shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -21,7 +27,10 @@ class MyButton extends StatelessWidget {
             ),
           ),
           onPressed: () => func(),
-          child: Text(txt),
+          child: Text(
+            txt,
+            style: TextStyle(color: textColor),
+          ),
         ),
       ),
     );

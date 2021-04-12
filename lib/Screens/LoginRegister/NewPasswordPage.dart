@@ -38,7 +38,7 @@ class NewPasswordPage extends StatelessWidget {
                 ),
               ),
               InputTxt(
-                lable: 'کلمه عبور',
+                label: 'کلمه عبور',
                 suffix: SvgPicture.asset('Assets/Icons/LoginRegister/Lock.svg'),
                 isSecure: true,
               ),

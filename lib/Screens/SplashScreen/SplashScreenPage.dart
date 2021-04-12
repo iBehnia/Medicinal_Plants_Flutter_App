@@ -40,6 +40,6 @@ class SplashScreenPage extends StatelessWidget {
 
   Future _handelSplash() async {
     await Future.delayed(Duration(seconds: 2))
-        .then((value) => Get.off(MyBottomNavigator()));
+        .then((value) => Get.off(() => MyBottomNavigator()));
   }
 }

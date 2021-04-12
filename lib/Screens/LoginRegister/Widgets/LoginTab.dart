@@ -5,7 +5,7 @@ import 'package:medical_plants/Screens/LoginRegister/PasswordRecoveryPage.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 import 'package:get/get.dart';
 
-class Login extends StatelessWidget {
+class LoginTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,11 +17,11 @@ class Login extends StatelessWidget {
               height: Get.height / 20,
             ),
             InputTxt(
-              lable: 'نام کاربری یا ایمیل',
+              label: 'نام کاربری یا ایمیل',
               suffix: SvgPicture.asset('Assets/Icons/LoginRegister/Email.svg'),
             ),
             InputTxt(
-              lable: 'کلمه عبور',
+              label: 'کلمه عبور',
               suffix: SvgPicture.asset('Assets/Icons/LoginRegister/Lock.svg'),
               isSecure: true,
             ),

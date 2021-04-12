@@ -4,9 +4,9 @@ import 'package:medical_plants/Screens/HomePage/Widgets/BestObserversGridView.da
 import 'package:medical_plants/Screens/HomePage/Widgets/SearchBar.dart';
 
 import 'package:get/get.dart';
-import 'package:medical_plants/Screens/LoginRegister/LogInOutTabBar.dart';
+import 'package:medical_plants/Screens/LoginRegister/LogInOutPageTabBar.dart';
 
-import '../HomePage/Widgets/NearestPlantsGridView.dart';
+import '../../GeneralWidgets/PlantsGridView.dart';
 import '../HomePage/Widgets/NearestObserversGridView.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                     IconButton(
                       icon: Icon(Icons.settings),
                       onPressed: () {
-                        Get.to(LogInOutTabBar());
+                        Get.to(LogInOutPgeTabBar());
                       },
                     ),
                   ],
@@ -38,7 +38,9 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 20),
                 child: txt('نزدیک ترین گیاهان'),
               ),
-              NearestPlantsGridView(),
+              PlantsGridView(
+                direction: Axis.horizontal,
+              ),
               Padding(
                 padding: const EdgeInsets.only(right: 20),
                 child: txt('نزدیک ترین مشاهده کننده ها'),
