@@ -13,7 +13,7 @@ class DashedImageBox extends StatelessWidget {
         dashPattern: [8, 4],
         borderType: BorderType.RRect,
         radius: Radius.circular(12),
-        color: kDashedBorderColor,
+        color: kBorderColor,
         child: Container(
           width: Get.width,
           height: Get.height / 7,

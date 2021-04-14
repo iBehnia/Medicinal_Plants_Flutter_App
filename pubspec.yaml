@@ -56,6 +56,9 @@ flutter:
    - Assets/Icons/BottomNavigator/ActiveIcons/
    - Assets/Icons/BottomNavigator/InActiveIcons/
    - Assets/Icons/
+   - Assets/Icons/SettingsPage/
+   - Assets/Icons/SettingsPage/QAPage/
+   - Assets/Icons/SettingsPage/ContactUs/
    - Assets/Icons/ReportPage/
    - Assets/Icons/LoginRegister/
   #   - images/a_dot_ham.jpeg

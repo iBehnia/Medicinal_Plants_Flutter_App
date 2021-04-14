@@ -19,12 +19,12 @@ class PlantsGridView extends StatelessWidget {
       child: GridView.count(
         scrollDirection: direction,
         crossAxisCount: 2,
-        children: List.generate(50, (index) => gridCard()),
+        children: List.generate(50, (index) => PlantsGridCard()),
       ),
     );
   }
 
-  Widget gridCard() {
+  Widget PlantsGridCard() {
     return Stack(children: [
       Container(
         margin: EdgeInsets.all(5),
