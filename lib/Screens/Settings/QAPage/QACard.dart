@@ -42,6 +42,7 @@ class _QACardState extends State<QACard> {
               Expanded(
                 flex: 15,
                 child: IconButton(
+                  splashColor: kBackGroundColor,
                   icon: SvgPicture.asset(
                     'Assets/Icons/SettingsPage/QAPage/$_icon.svg',
                     height: 25,

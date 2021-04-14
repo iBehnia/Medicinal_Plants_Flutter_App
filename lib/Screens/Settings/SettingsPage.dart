@@ -6,6 +6,7 @@ import 'package:medical_plants/Screens/Settings/ContactUsPage/ContactUsPage.dart
 import 'package:medical_plants/Screens/Settings/QAPage/QAPage.dart';
 import 'package:medical_plants/Screens/Settings/SettingTilePage/SettingTilePage.dart';
 
+import 'EditProfilePage/EditProfilePage.dart';
 import 'Widgets/SettingsPageCard.dart';
 
 class SettingsPage extends StatelessWidget {
@@ -24,6 +25,7 @@ class SettingsPage extends StatelessWidget {
             crossAxisCount: 2,
             children: [
               SettingsPageCard(
+                function: () => Get.to(EditProfilePage()),
                 icon: SvgPicture.asset('Assets/Icons/SettingsPage/Edit.svg'),
                 tile: 'ویرایش حساب کاربری',
               ),
