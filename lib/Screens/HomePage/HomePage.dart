@@ -51,6 +51,9 @@ class HomePage extends StatelessWidget {
                 child: txt('بهترین مشاهده کننده ها'),
               ),
               BestObserversGridView(),
+              SizedBox(
+                height: Get.height / 30,
+              )
             ],
           ),
         ),
