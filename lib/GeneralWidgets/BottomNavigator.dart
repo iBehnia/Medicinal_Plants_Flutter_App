@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:medical_plants/Screens/NotificationsPage/NotificationsPage.dart';
+import 'package:medical_plants/Screens/NotificationPage/NotifocationPage.dart';
 import 'package:medical_plants/Screens/ReprotPages/ReportStep1Page.dart';
 import 'package:medical_plants/Screens/Settings/SettingsPage.dart';
 import 'package:medical_plants/Screens/UserProfile/UserProfilePageTabBar.dart';
@@ -70,7 +70,7 @@ class MyBottomNavigator extends StatelessWidget {
       HomePage(),
       UserProfilePageTabBar(),
       ReportStep1Page(),
-      NotificationsPage(),
+      NotificationPage(),
       SettingsPage(),
     ];
   }

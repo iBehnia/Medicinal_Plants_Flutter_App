@@ -27,7 +27,7 @@ class PlantsGridView extends StatelessWidget {
 
   Widget PlantsGridCard() {
     return InkWell(
-      onTap: () => Get.to(PlantProfilePage()),
+      onTap: () => Get.to(() => PlantProfilePage()),
       child: Stack(children: [
         Container(
           margin: EdgeInsets.all(5),

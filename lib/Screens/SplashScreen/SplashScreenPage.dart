@@ -21,15 +21,28 @@ class SplashScreenPage extends StatelessWidget {
             SizedBox(
               height: Get.height / 30,
             ),
+            Text(
+              'دای مپ (DI Map)',
+              style: TextStyle(
+                // fontWeight: FontWeight.w300,
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: kButtonColor,
+              ),
+            ),
             FittedBox(
-              child: Text(
-                'سامانه شناسایی مکان\n گیاهان دارویی',
-                style: TextStyle(
-                  // fontWeight: FontWeight.w300,
-                  fontSize: 30,
-                  color: kButtonColor,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(vertical: 8, horizontal: 12),
+                child: Text(
+                  ' Plant Medical Iranian of Distribution',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: kButtonColor,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
             ),
           ],

@@ -12,6 +12,7 @@ class CircularGridCard extends StatelessWidget {
         children: [
           Column(children: [
             CircleAvatar(
+              // todo: size of Circular avatar
               backgroundColor: color,
               radius: 56,
               child: CircleAvatar(

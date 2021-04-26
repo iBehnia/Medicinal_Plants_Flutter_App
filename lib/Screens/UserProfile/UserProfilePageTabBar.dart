@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:medical_plants/GeneralWidgets/PlantsGridView.dart';
 import 'package:medical_plants/Screens/LoginRegister/Widgets/MyButton.dart';
+import 'package:medical_plants/Screens/UserProfile/Widget/FolowingTab.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 import 'package:get/get.dart';
+
+import 'FolowIngErsListTabBar.dart';
 
 TabController _tabController;
 
@@ -160,23 +163,26 @@ Widget MyTabBar() {
 }
 
 Widget folowNumbers({String number, String description}) {
-  return Container(
-    margin: EdgeInsets.only(
-      top: 10,
-      left: 20,
-      right: 20,
-    ),
-    child: Column(
-      children: [
-        Text(
-          number,
-          style: TextStyle(fontSize: 22),
-        ),
-        Text(
-          description,
-          style: TextStyle(fontSize: 15, color: kSubTitleFontsColor),
-        ),
-      ],
+  return InkWell(
+    onTap: () => Get.to(() => FolowIngErsListTabBar()),
+    child: Container(
+      margin: EdgeInsets.only(
+        top: 10,
+        left: 20,
+        right: 20,
+      ),
+      child: Column(
+        children: [
+          Text(
+            number,
+            style: TextStyle(fontSize: 22),
+          ),
+          Text(
+            description,
+            style: TextStyle(fontSize: 15, color: kSubTitleFontsColor),
+          ),
+        ],
+      ),
     ),
   );
 }

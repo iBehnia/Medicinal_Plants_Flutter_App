@@ -6,16 +6,24 @@ class TopBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child:
+              CircleAvatar(backgroundImage: AssetImage('Assets/Images/p.png')),
+        ),
+        Text('سارا منتظری'),
+        Spacer(),
         IconButton(
-          icon: Icon(
-            Icons.share,
-            size: 20,
+          icon: SvgPicture.asset(
+            'Assets/Icons/PlantProfile/Edit.svg',
+            height: 20,
+            width: 20,
           ),
           onPressed: () {},
         ),
         IconButton(
           icon: SvgPicture.asset(
-            'Assets/Icons/PlantProfile/Bookmark.svg',
+            'Assets/Icons/PlantProfile/Download.svg',
             height: 20,
             width: 20,
           ),
@@ -34,26 +42,18 @@ class TopBar extends StatelessWidget {
         ),
         IconButton(
           icon: SvgPicture.asset(
-            'Assets/Icons/PlantProfile/Download.svg',
+            'Assets/Icons/PlantProfile/Bookmark.svg',
             height: 20,
             width: 20,
           ),
           onPressed: () {},
         ),
         IconButton(
-          icon: SvgPicture.asset(
-            'Assets/Icons/PlantProfile/Edit.svg',
-            height: 20,
-            width: 20,
+          icon: Icon(
+            Icons.share,
+            size: 20,
           ),
           onPressed: () {},
-        ),
-        Spacer(),
-        Text('سارا منتظری'),
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child:
-              CircleAvatar(backgroundImage: AssetImage('Assets/Images/p.png')),
         ),
       ],
     );

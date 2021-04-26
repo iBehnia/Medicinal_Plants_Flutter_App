@@ -35,7 +35,10 @@ class EditProfilePage extends StatelessWidget {
                           backgroundColor: kBackGroundColor,
                           child: IconButton(
                             splashColor: kBackGroundColor,
-                            icon: Icon(Icons.camera_alt),
+                            icon: Icon(
+                              Icons.camera_alt,
+                              color: kBlackFontsColor,
+                            ),
                             onPressed: () {},
                           ),
                         ))
