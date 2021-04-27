@@ -6,7 +6,12 @@ class InputTxt extends StatelessWidget {
   Widget suffix;
   Widget prefix;
   String label;
-  InputTxt({this.isSecure = false, this.suffix, this.label, this.prefix});
+  InputTxt({
+    this.isSecure = false,
+    this.suffix,
+    this.label,
+    this.prefix,
+  });
   @override
   Widget build(BuildContext context) {
     return Container(

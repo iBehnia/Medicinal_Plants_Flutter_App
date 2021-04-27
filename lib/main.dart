@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'GeneralWidgets/BottomNavigator.dart';
 import 'Screens/HomePage/HomePage.dart';
+import 'Screens/OnbordingPages/Widgets/OnBoardingPages.dart';
 import 'Screens/SplashScreen/SplashScreenPage.dart';
 import 'package:pedantic/pedantic.dart';
 import 'Themes/Theme.dart';

@@ -9,6 +9,15 @@ class JoinRequestTab extends StatelessWidget {
         child: ListView(
           children: [
             JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
+            JoinReqCard(),
           ],
         ),
       ),

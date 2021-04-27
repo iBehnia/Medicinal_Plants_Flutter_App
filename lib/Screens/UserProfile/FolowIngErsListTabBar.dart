@@ -10,8 +10,11 @@ class FolowIngErsListTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: MyTabBar(),
+      body: Directionality(
+        textDirection: TextDirection.rtl,
+        child: SafeArea(
+          child: MyTabBar(),
+        ),
       ),
     );
   }

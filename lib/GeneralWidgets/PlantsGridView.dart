@@ -3,7 +3,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:medical_plants/Screens/HomePage/Widgets/GridViews.dart';
 import 'package:medical_plants/Screens/PlantProfile/PlantProfilePage.dart';
