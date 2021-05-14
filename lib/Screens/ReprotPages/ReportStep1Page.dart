@@ -38,7 +38,7 @@ class ReportStep1Page extends StatelessWidget {
                   children: [
                     MyButton(
                       txt: 'ادامه',
-                      func: () {},
+                      func: () => Get.to(ReportStep2Page()),
                     ),
                     SizedBox(
                       width: Get.width / 15,
@@ -47,7 +47,7 @@ class ReportStep1Page extends StatelessWidget {
                       txt: 'ثبت اطلاعات',
                       color: kSecondButtonColor,
                       textColor: kBlackFontsColor,
-                      func: () => Get.to(ReportStep2Page()),
+                      func: () {},
                     ),
                   ],
                 ),
