@@ -12,6 +12,7 @@ class ContactUsPage extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(
         myTitle: 'تماس با ما',
+        func: () => Get.back(),
       ),
       body: Directionality(
         textDirection: TextDirection.rtl,

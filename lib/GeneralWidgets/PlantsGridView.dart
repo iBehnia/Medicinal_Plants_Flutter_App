@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:medical_plants/Screens/HomePage/Widgets/GridViews.dart';
 import 'package:medical_plants/Screens/PlantProfile/PlantProfilePage.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 
@@ -13,13 +12,16 @@ class PlantsGridView extends StatelessWidget {
   PlantsGridView({this.direction});
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: 10),
-      height: Get.height * 0.33,
-      child: GridView.count(
-        scrollDirection: direction,
-        crossAxisCount: 2,
-        children: List.generate(50, (index) => PlantsGridCard()),
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Container(
+        margin: EdgeInsets.only(top: 10),
+        height: Get.height * 0.33,
+        child: GridView.count(
+          scrollDirection: direction,
+          crossAxisCount: 2,
+          children: List.generate(50, (index) => PlantsGridCard()),
+        ),
       ),
     );
   }

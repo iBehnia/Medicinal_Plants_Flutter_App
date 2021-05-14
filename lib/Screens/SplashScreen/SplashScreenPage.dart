@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:medical_plants/GeneralWidgets/BottomNavigator.dart';
-import 'package:medical_plants/Screens/HomePage/HomePage.dart';
 import 'package:medical_plants/Screens/OnbordingPages/Widgets/OnBoardingPages.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 
@@ -17,7 +15,7 @@ class SplashScreenPage extends StatelessWidget {
           children: [
             Image.asset(
               'Assets/Images/Logo.png',
-              height: Get.height / 4,
+              height: Get.height / 4.5,
             ),
             SizedBox(
               height: Get.height / 30,
@@ -26,7 +24,7 @@ class SplashScreenPage extends StatelessWidget {
               'دای مپ (DI Map)',
               style: TextStyle(
                 // fontWeight: FontWeight.w300,
-                fontSize: 30,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: kButtonColor,
               ),
@@ -39,7 +37,7 @@ class SplashScreenPage extends StatelessWidget {
                   ' Plant Medical Iranian of Distribution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 20,
                     color: kButtonColor,
                   ),
                   textAlign: TextAlign.center,

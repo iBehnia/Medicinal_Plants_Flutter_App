@@ -21,6 +21,7 @@ class _SettingTilePageState extends State<SettingTilePage> {
     return Scaffold(
       appBar: MyAppBar(
         myTitle: 'تنظیمات',
+        func: () => Get.back(),
       ),
       body: SafeArea(
         child: Directionality(

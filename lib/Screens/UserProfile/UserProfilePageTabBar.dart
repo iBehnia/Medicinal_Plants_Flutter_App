@@ -125,7 +125,7 @@ Widget MyTabBar() {
                 child: FittedBox(child: Text('مشاهدات')),
               ),
               Tab(
-                child: FittedBox(child: Text('شناشایی شده ها')),
+                child: FittedBox(child: Text('شناسایی شده ها')),
               ),
               Tab(
                 child: FittedBox(child: Text('علاقه مندی ها')),

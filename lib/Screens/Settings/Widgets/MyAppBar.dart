@@ -4,7 +4,8 @@ import 'package:medical_plants/Themes/MyColors.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   String myTitle;
-  MyAppBar({this.myTitle});
+  VoidCallback func;
+  MyAppBar({this.myTitle, this.func});
   @override
   Widget build(BuildContext context) {
     return PreferredSize(
@@ -23,7 +24,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             Icons.arrow_back_ios_rounded,
             size: 24,
           ),
-          onPressed: () => Get.back(),
+          onPressed: () => func(),
         ),
         elevation: 0,
         backgroundColor: kBackGroundColor,

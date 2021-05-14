@@ -17,7 +17,7 @@ class FolowersCard extends StatelessWidget {
                 flex: 15,
                 child: Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 5),
                   child: CircleAvatar(
                     radius: Get.height / 28,
                     backgroundImage: AssetImage('Assets/Images/p.png'),

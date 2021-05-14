@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:medical_plants/Screens/Settings/Widgets/MyAppBar.dart';
 import 'package:medical_plants/Screens/UserProfile/Widget/FolowersTab.dart';
 import 'package:medical_plants/Screens/UserProfile/Widget/FolowingTab.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
@@ -10,6 +11,10 @@ class FolowIngErsListTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyAppBar(
+        myTitle: '',
+        func: () => Get.back(),
+      ),
       body: Directionality(
         textDirection: TextDirection.rtl,
         child: SafeArea(

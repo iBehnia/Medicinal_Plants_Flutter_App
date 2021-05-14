@@ -19,7 +19,8 @@ class NotifCard extends StatelessWidget {
               Expanded(
                 flex: 10,
                 child: Padding(
-                  padding: const EdgeInsets.all(10),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   child: CircleAvatar(
                     radius: Get.height / 28,
                     backgroundImage: AssetImage('Assets/Images/p.png'),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:medical_plants/Screens/HomeAndSearchPage/HomePage.dart';
 import 'package:medical_plants/Screens/NotificationPage/NotifocationPage.dart';
 import 'package:medical_plants/Screens/ReprotPages/ReportStep1Page.dart';
 import 'package:medical_plants/Screens/Settings/SettingsPage.dart';
@@ -9,7 +10,6 @@ import 'package:medical_plants/Screens/UserProfile/UserProfilePageTabBar.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
 import 'package:medical_plants/Themes/Theme.dart';
 
-import '../Screens/HomePage/HomePage.dart';
 import '../Screens/LoginRegister/LogInOutPageTabBar.dart';
 
 //import 'package:persistent_bottom_nav_bar/nav-bar-styles/style-16-bottom-nav-bar.widget.dart';

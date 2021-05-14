@@ -12,6 +12,7 @@ class QAPage extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(
         myTitle: 'پرسش و پاسخ',
+        func: () => Get.back(),
       ),
       body: SafeArea(
         child: Directionality(

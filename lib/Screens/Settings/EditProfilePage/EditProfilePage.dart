@@ -13,6 +13,7 @@ class EditProfilePage extends StatelessWidget {
     return Scaffold(
       appBar: MyAppBar(
         myTitle: 'ویرایش حساب کاربری',
+        func: () => Get.back(),
       ),
       body: Directionality(
         textDirection: TextDirection.rtl,

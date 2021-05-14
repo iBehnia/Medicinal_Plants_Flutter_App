@@ -9,6 +9,7 @@ class AbuotUs extends StatelessWidget {
     return Scaffold(
         appBar: MyAppBar(
       myTitle: 'درباره ما',
+      func: () => Get.back(),
     ));
   }
 }

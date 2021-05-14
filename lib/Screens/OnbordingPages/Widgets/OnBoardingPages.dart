@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:medical_plants/GeneralWidgets/BottomNavigator.dart';
-import 'package:medical_plants/Screens/LoginRegister/Widgets/MyButton.dart';
 import 'package:medical_plants/Themes/MyColors.dart';
-import 'package:introduction_screen/introduction_screen.dart';
 
 class OnBoardingPage extends StatefulWidget {
   @override
@@ -51,21 +49,21 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
         PageViewModel(
           title: 'مشاهده',
           body: 'یه عکس از گیاهای اطرافت بنداز',
-          image: _buildImage('Assets/Images/On1.png'),
+          image: _buildImage('Assets/Images/On1.png', Get.width * 0.8),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: 'اشتراک گذاری',
           body:
               'دای مپ رو باز کن و اطلاعات گیاهی که دیدی رو با بقیه به اشتراک بزار',
-          image: _buildImage('Assets/Images/On2.png'),
+          image: _buildImage('Assets/Images/On2.png', Get.width * 0.8),
           decoration: pageDecoration,
         ),
         PageViewModel(
           title: 'یادگیری',
           body:
               'در مورد دانسته های گیاهان دارویی بقیه بخون و به دانسته هات اضافه کن',
-          image: _buildImage('Assets/Images/On2.png'),
+          image: _buildImage('Assets/Images/On3.png', Get.width * 0.8),
           decoration: pageDecoration,
         ),
       ],
@@ -78,14 +76,14 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
       nextFlex: 0,
       //rtl: true, // Display as right-to-left
       skip: const Text(
-        'بیخیال',
+        'گذشتن',
         style: TextStyle(color: kButtonColor),
       ),
       next: const Icon(
         Icons.arrow_forward,
         color: kButtonColor,
       ),
-      done: const Text('! بریم',
+      done: const Text('شروع',
           style: TextStyle(fontWeight: FontWeight.w600, color: kButtonColor)),
       curve: Curves.fastLinearToSlowEaseIn,
       controlsMargin: const EdgeInsets.all(16),
