@@ -1,3 +1,6 @@
+import 'dart:developer';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -20,19 +23,33 @@ class PlantProfilePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TopBar(),
-              Container(
-                height: Get.height * 0.35,
-                margin: EdgeInsets.only(top: 5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(20),
-                  ),
-                  image: DecorationImage(
-                      image: AssetImage(
-                        'Assets/Images/img1.jpg',
+              Stack(
+                children: [
+                  Container(
+                    height: Get.height * 0.35,
+                    margin: EdgeInsets.only(top: 5),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(20),
                       ),
-                      fit: BoxFit.cover),
-                ),
+                      image: DecorationImage(
+                          image: AssetImage(
+                            'Assets/Images/img1.jpg',
+                          ),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
+                  Positioned(
+                    top: 15,
+                    right: 10,
+                    child: IconButton(
+                      icon: SvgPicture.asset(
+                        'Assets/Icons/Like.svg',
+                      ),
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
               ),
               Container(
                 color: kProfileUpColor,
